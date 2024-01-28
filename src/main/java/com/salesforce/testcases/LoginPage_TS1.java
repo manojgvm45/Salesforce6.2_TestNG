@@ -22,9 +22,9 @@ public class LoginPage_TS1 extends ProjectSpecificMethods{
 	public void verifyLogin() {
 		LoginPage loginPage = new LoginPage();
 		HomePage homePage = new HomePage();
-		loginPage.enterUsername("manojgvm45@testleaf.com");
-		loginPage.enterPassword("Rajmanojgvm@45");
-		loginPage.clickLoginBtn();
+		loginPage.enterUsername("manojgvm45@testleaf.com")
+		.enterPassword("Rajmanojgvm@45")
+		.clickLoginBtn();
 		homePage.verifyHomePage("Lightning Experience");
 		
 	}
