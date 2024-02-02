@@ -22,10 +22,12 @@ public class LoginPage_TS1 extends ProjectSpecificMethods{
 	public void verifyLogin() throws InterruptedException {
 		LoginPage loginPage = new LoginPage();
 		HomePage homePage = new HomePage();
+
 		loginPage.enterUsername("manojgvm45@testleaf.com");
 		loginPage.enterPassword("Rajmanojgvm@45");
 		loginPage.clickLoginBtn();
 		homePage.verifyHomePage("Home | Salesforce");
+
 		
 	}
 	

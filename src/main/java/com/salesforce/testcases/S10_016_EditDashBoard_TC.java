@@ -14,7 +14,7 @@ public class S10_016_EditDashBoard_TC extends ProjectSpecificMethods {
 		testDescription = "Verify Editdashboard functionality";
 		authors = "ManojBabuM";
 		category = "Smoke";
-		excelFileName = "Login_Credentials";
+		//excelFileName = "Login_Credentials";
 	}
 	
 	@Test(dataProvider = "fetchData", groups= {"smoke"})
