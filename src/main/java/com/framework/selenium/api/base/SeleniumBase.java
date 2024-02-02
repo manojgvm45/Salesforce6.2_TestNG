@@ -558,7 +558,7 @@ public class SeleniumBase extends Reporter implements Browser, Element  {
 			setWait();
 			act = new Actions(getDriver());
 			getDriver().manage().window().maximize();
-			getDriver().manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+			getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(90));
 			getDriver().get(getPropertiesData("BrowserLaunch", "browser"));
 			reportStep("The Browser Launched in chrome browser with URL " + url, "pass");
 		} catch (Exception e) {

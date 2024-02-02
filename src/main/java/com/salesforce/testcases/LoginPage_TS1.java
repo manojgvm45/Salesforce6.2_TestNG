@@ -19,13 +19,13 @@ public class LoginPage_TS1 extends ProjectSpecificMethods{
 	}
 	
 	@Test(groups= {"smoke"})
-	public void verifyLogin() {
+	public void verifyLogin() throws InterruptedException {
 		LoginPage loginPage = new LoginPage();
 		HomePage homePage = new HomePage();
 		loginPage.enterUsername("manojgvm45@testleaf.com");
 		loginPage.enterPassword("Rajmanojgvm@45");
 		loginPage.clickLoginBtn();
-		homePage.verifyHomePage("Lightning Experience");
+		homePage.verifyHomePage("Home | Salesforce");
 		
 	}
 	

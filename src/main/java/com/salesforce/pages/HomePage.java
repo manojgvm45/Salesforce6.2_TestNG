@@ -1,12 +1,11 @@
 package com.salesforce.pages;
 
-import static org.testng.Assert.assertEquals;
-
 import com.framework.selenium.api.design.Locators;
 import com.framework.testng.api.base.ProjectSpecificMethods;
 
 public class HomePage extends ProjectSpecificMethods{
-	public HomePage verifyHomePage(String title) {
+	public HomePage verifyHomePage(String title) throws InterruptedException {
+		Thread.sleep(6000);
 		verifyTitle(title);
 		return this;
 	}
