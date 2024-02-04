@@ -5,7 +5,9 @@ import java.time.Duration;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,18 +27,20 @@ public class DriverInstance  {
 	public void setDriver(String browser, boolean headless) {		
 		switch (browser) {
 		case "chrome":
-			ChromeOptions options = new ChromeOptions();
-			if(headless) { options.addArguments("--headless=new"); }
-			options.addArguments("--start-maximized"); 
-			options.addArguments("--disable-notifications"); 
-			options.addArguments("--incognito");
-			remoteWebdriver.set(new ChromeDriver(options));
+			ChromeOptions chromeOptions = new ChromeOptions();
+			if(headless) { chromeOptions.addArguments("--headless=new"); }
+			chromeOptions.addArguments("--start-maximized"); 
+			chromeOptions.addArguments("--disable-notifications"); 
+			//chromeOptions.addArguments("--incognito");
+			remoteWebdriver.set(new ChromeDriver(chromeOptions));
 			break;
 		case "firefox":
-			remoteWebdriver.set(new FirefoxDriver());
+			FirefoxOptions fireFoxoptions = new FirefoxOptions();
+			remoteWebdriver.set(new FirefoxDriver(fireFoxoptions));
 			break;
 		case "edge":
-			remoteWebdriver.set(new EdgeDriver());
+			EdgeOptions edgeOptions = new EdgeOptions();
+			remoteWebdriver.set(new EdgeDriver(edgeOptions));
 		default:
 			break;
 		}
