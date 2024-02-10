@@ -18,11 +18,11 @@ public class S10_016_EditDashBoard_TC extends ProjectSpecificMethods {
 	}
 	
 	@Test(dataProvider = "fetchData", groups= {"smoke"})
-	public void EditDashBoard_TS(String uname,String pwd) {
+	public void EditDashBoard_TS() {
 		try {
 			new LoginPage()
-			.enterUsername(uname)
-			.enterPassword(pwd)
+			.enterUsername("manojgvm45@gmail.com")
+			.enterPassword("Rajmanojgvm@45")
 			.clickLoginBtn()
 			.clickAppLauncher()
 			.clickViewAll()

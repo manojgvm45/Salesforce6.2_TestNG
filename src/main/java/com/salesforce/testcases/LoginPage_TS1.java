@@ -18,7 +18,7 @@ public class LoginPage_TS1 extends ProjectSpecificMethods{
 		category = "Smoke";
 	//	excelFileName = "Login_Credentials";
 	}
-	@Test(groups= {"smoke","regression"},priority=0)
+	@Test(priority=0)
 	public void loginWithValidCredentials() throws InterruptedException {
 		loginPage.enterUsername("manojgvm45@testleaf.com")
 		.enterPassword("Rajmanojgvm@45")
@@ -26,14 +26,14 @@ public class LoginPage_TS1 extends ProjectSpecificMethods{
 		homePage.verifyHomePage("Home | Salesforce");
 	}
 
-	@Test(groups= {"smoke","regression"},priority=1,dependsOnMethods = {"loginWithValidCredentials"})
+	@Test(priority=1)
 	public void loginWithInvalidUserName() {
 		loginPage.enterUsername("manojgvm45@gmail.com")
 		.enterPassword("Rajmanojgvm@45")
 		.invalidCredAlert();
 		}
 	
-	@Test(groups= {"smoke","regression"},priority=2,dependsOnMethods = {"loginWithValidCredentials"})
+	@Test(priority=2)
 	public void loginWithInvalidPassword() {
 		loginPage.enterUsername("manojgvm45@gmail.com")
 		.enterPassword("Manojgvm@45")

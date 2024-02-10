@@ -5,7 +5,7 @@ import com.framework.testng.api.base.ProjectSpecificMethods;
 
 public class AppLauncherPage extends ProjectSpecificMethods{
 	
-
+	
 	public AppLauncherPage searchApp(String appName) {
 		type(locateElement(Locators.XPATH,getPropertiesData("AppLauncherPage", "AppLauncherPage.searchapp.txt")),appName);
 		return this;
